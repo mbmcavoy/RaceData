@@ -1,0 +1,38 @@
+{
+	"framePeriod" : 1000,
+	"frameBytes" : 510,
+	"dataChannelGroups" : [
+		{
+			"groupName" : "Inertial Measurements",
+			"groupSampleRate" : 30,
+			"groupByteOffset" : 0,
+			"groupSampleBytes" : 17,
+			"groupChannels" : [
+				{
+					"channelType" : "analog",
+					"channelName" : "Longitudinal Acceleration",
+					"channelUnits" : "g",
+					"channelByteOffset" : 1
+				},
+				{
+					"channelType" : "analog",
+					"channelName" : "Lateral Acceleration",
+					"channelUnits" : "g",
+					"channelByteOffset" : 5
+				},
+				{
+					"channelType" : "analog",
+					"channelName" : "Vertical Acceleration",
+					"channelUnits" : "g",
+					"channelByteOffset" : 9
+				},
+				{
+					"channelType" : "analog",
+					"channelName" : "Yaw Rate",
+					"channelUnits" : "degrees/second",
+					"channelByteOffset" : 13
+				}
+			]
+		}	
+	]
+}
