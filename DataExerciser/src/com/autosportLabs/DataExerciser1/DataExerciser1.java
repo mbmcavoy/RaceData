@@ -1,4 +1,4 @@
-package com.autosportLabs.captureMock;
+package com.autosportLabs.DataExerciser1;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,7 +15,7 @@ import com.autosportLabs.data.AnalogDataChannel;
 import com.autosportLabs.data.DataChannelGroup;
 import com.autosportLabs.data.DataManager;
 
-public class CaptureMock {
+public class DataExerciser1 {
 	
 	public static void main(String[] args) throws Exception {
 		
