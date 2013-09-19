@@ -2,14 +2,13 @@ package com.autosportLabs.DataExerciser1;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+
+import org.apache.commons.io.IOUtils;
 
 import com.autosportLabs.data.AnalogDataChannel;
 import com.autosportLabs.data.DataChannelGroup;
@@ -21,9 +20,9 @@ public class DataExerciser1 {
 		
 		String originalDataFile = "rc_0.log";
 		
-		
-		byte[] encodedJSON = Files.readAllBytes(Paths.get("config.json"));
-		String stringJSON = StandardCharsets.UTF_8.decode(ByteBuffer.wrap(encodedJSON)).toString();
+		File dataFile = new File("config.json");
+		FileInputStream stream = new FileInputStream(dataFile);
+		String stringJSON = IOUtils.toString(stream, "UTF-8"); 
 		
 		DataManager captureDataManager = new DataManager(stringJSON);
 		
@@ -181,7 +180,7 @@ public class DataExerciser1 {
 		 
 		 System.out.println("Received " + samplesReceived + " samples.");
 		 System.out.println("Skipped " + samplesSkipped + " samples.");
-		 System.out.println("Errors: " + errors);
+		 System.out.println("Data Integrity Errors: " + errors);
 	}
 
 }
