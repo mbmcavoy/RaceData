@@ -5,14 +5,6 @@ This is exploring potential major updates to AutosportLabs' RaceCapture/Pro syst
 RaceData
 ========
 Contains the core classes to be used by client or server applications.
-
-Uses the Jackson library (http://wiki.fasterxml.com/JacksonHome) for JSON parsing. The following files
-will need to be obtained and placed in RaceData/lib/:
- - jackson-core-2.2.3.jar
- - jackson-annotations-2.2.3.jar
- - jackson-databind-2.2.3.jar
- 
- Download links are at http://wiki.fasterxml.com/JacksonDownload.
  
 DataExerciser1
 ==============
